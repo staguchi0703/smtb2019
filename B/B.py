@@ -16,6 +16,11 @@ sys.stdin=f
 ##################################
 # %%
 # 以下ペースト可
-num_list = [int(item) for item in input().split()]
-print('B', num_list)
+num = int(input())
+tax_price_list = [int(num*1.08) for num in range(num+1)]
+
+if num in tax_price_list:
+    print(tax_price_list.index(num))
+else:
+    print(':(')
 

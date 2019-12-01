@@ -16,6 +16,11 @@ sys.stdin=f
 ##################################
 # %%
 # 以下ペースト可
-num_list = [int(item) for item in input().split()]
-print('D',num_list)
+import itertools
+num = int(input())
+num_list = [int(item) for item in input()]
+
+res_list = set(itertools.combinations(num_list,3))
+
+print(len(res_list))
 

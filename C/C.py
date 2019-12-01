@@ -16,6 +16,39 @@ sys.stdin=f
 ##################################
 # %%
 # 以下ペースト可
-num_list = [int(item) for item in input().split()]
-print('C', num_list)
+line = input()
+
+if int(line) >= 100:
+    num = int(line[-2:])
+    item_number = int(line[:-2])
+
+
+
+    res_list = []
+    a = 5
+    while True:
+        if num == 0:
+            break
+        for _ in range(num//a):
+            res_list.append(a)
+
+        num = num % a
+
+        if 1<= num <= 4:
+            res_list.append(num)
+            break
+
+
+    # print(res_list)
+
+    if len(res_list) > item_number:
+        print(0)
+    else:
+        print(1)
+
+else:
+    print(0)
+
+
+
 

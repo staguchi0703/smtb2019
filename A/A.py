@@ -16,6 +16,12 @@ sys.stdin=f
 ##################################
 # %%
 # 以下ペースト可
-num_list = [int(item) for item in input().split()]
-print('A', num_list)
+M1, D1 = [int(item) for item in input().split()]
+M2, D2 = [int(item) for item in input().split()]
+
+if M1==M2:
+    print(0)
+else:
+    print(1)
+
 
